@@ -2,7 +2,7 @@ var numberA = parseFloat(process.argv[2]);
 var numberB = parseFloat(process.argv[3]);
 
 
-console.log("Numbers: " + getNumbers());
+console.log("Total: " + sum(getNumbers()));
 
 function getNumbers() {
     var numbers = [];
@@ -14,6 +14,14 @@ function getNumbers() {
         }
     }
     return numbers;
+}
+
+function sum(numbers) {
+    var total = 0;
+    numbers.forEach(function addToTotal(number) {
+        total = total + number;
+    });
+    return total;
 }
 
 
