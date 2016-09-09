@@ -1,7 +1,16 @@
 var numberA = parseFloat(process.argv[2]);
 var numberB = parseFloat(process.argv[3]);
 
-console.log("Total: " + sum(getNumbers()));
+function showResult() {
+    var numbers = getNumbers();
+    if(numbers.length < 2) {
+        console.log("Please inform at least two valid numbers! ");
+    }
+    else {
+        console.log("Total: " + sum(numbers));
+    }
+};
+showResult();
 
 function getNumbers() {
     var numbers = getArguments().filter(isNumber).map(stringToNumber);
