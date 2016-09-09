@@ -18,9 +18,10 @@ function getNumbers() {
 
 function sum(numbers) {
     var total = 0;
-    numbers.forEach(function addToTotal(number) {
+    var addToTotal = function (numbers) {
         total = total + number;
-    });
+    };
+    numbers.array.forEach(addToTotal);
     return total;
 }
 
